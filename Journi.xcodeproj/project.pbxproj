@@ -12,6 +12,7 @@
 		5952F0792B672A5100A37E78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5952F0782B672A5100A37E78 /* Assets.xcassets */; };
 		5952F07C2B672A5100A37E78 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5952F07B2B672A5100A37E78 /* Preview Assets.xcassets */; };
 		5952F0842B672A6D00A37E78 /* Journi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5952F0832B672A6D00A37E78 /* Journi.swift */; };
+		598C03272B6C1E2500F44E03 /* JourniView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598C03262B6C1E2500F44E03 /* JourniView.swift */; };
 		59CC78CA2B6861DE00D05509 /* SampleJourni.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CC78C92B6861DE00D05509 /* SampleJourni.swift */; };
 		59CC78CF2B68687C00D05509 /* PreviewSampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59CC78CE2B68687C00D05509 /* PreviewSampleData.swift */; };
 /* End PBXBuildFile section */
@@ -23,6 +24,7 @@
 		5952F0782B672A5100A37E78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5952F07B2B672A5100A37E78 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5952F0832B672A6D00A37E78 /* Journi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Journi.swift; sourceTree = "<group>"; };
+		598C03262B6C1E2500F44E03 /* JourniView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourniView.swift; sourceTree = "<group>"; };
 		59CC78C92B6861DE00D05509 /* SampleJourni.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleJourni.swift; sourceTree = "<group>"; };
 		59CC78CE2B68687C00D05509 /* PreviewSampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewSampleData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -57,6 +59,7 @@
 		5952F0732B672A5000A37E78 /* Journi */ = {
 			isa = PBXGroup;
 			children = (
+				598C03252B6C1E1400F44E03 /* View */,
 				59CC78CB2B68686600D05509 /* Support */,
 				59E744082B672C5200C8F283 /* Test */,
 				5952F0822B672A6000A37E78 /* Model */,
@@ -83,6 +86,14 @@
 				59CC78C92B6861DE00D05509 /* SampleJourni.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		598C03252B6C1E1400F44E03 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				598C03262B6C1E2500F44E03 /* JourniView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		59CC78CB2B68686600D05509 /* Support */ = {
@@ -173,6 +184,7 @@
 				5952F0842B672A6D00A37E78 /* Journi.swift in Sources */,
 				59CC78CF2B68687C00D05509 /* PreviewSampleData.swift in Sources */,
 				5952F0772B672A5000A37E78 /* ContentView.swift in Sources */,
+				598C03272B6C1E2500F44E03 /* JourniView.swift in Sources */,
 				59CC78CA2B6861DE00D05509 /* SampleJourni.swift in Sources */,
 				5952F0752B672A5000A37E78 /* JourniApp.swift in Sources */,
 			);
@@ -316,6 +328,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -345,6 +358,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

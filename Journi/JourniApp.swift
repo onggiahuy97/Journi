@@ -13,7 +13,6 @@ struct JourniApp: App {
         WindowGroup {
             ContentView()
                 .modelContainer(for: [Journi.self])
-                .preferredColorScheme(.dark)
         }
     }
 }
