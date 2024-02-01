@@ -26,11 +26,21 @@ struct JourniView: View {
             }
         }
         .padding()
-        .background(.white)
+        .background(.thinMaterial)
         .clipShape(RoundedRectangle(cornerRadius: 12))
         .padding(.horizontal)
     }
 }
+
+let topColor = Color(red: 46 / 255.0, green: 43 / 255.0, blue: 60 / 255.0)
+let bottomColor = Color(red: 75 / 255.0, green: 52 / 255.0, blue: 89 / 255.0)
+
+// Create the gradient
+let gradient = LinearGradient(
+    gradient: Gradient(colors: [topColor, bottomColor]),
+    startPoint: .top,
+    endPoint: .bottom
+)
 
 struct ContentView: View {
     @Query private var journies: [Journi]
@@ -46,25 +56,15 @@ struct ContentView: View {
                 }
             }
             .navigationTitle("Journi")
-            .background(Color(uiColor: UIColor.systemGray6))
-            .overlay {
-                VStack {
-                    Spacer()
-                    Button {
-                        
-                    } label: {
-                        ZStack {
-                            Circle()
-                                .foregroundStyle(.white)
-                                .shadow(radius: 2, y: 2)
-                            Image(systemName: "plus")
-                                .foregroundStyle(.blue)
-                                .font(.title)
-                                .bold()
-                        }
-                        .frame(width: 85, height: 85)
-                    }
-                }
+            .navigationBarTitleDisplayMode(.automatic)
+            .background(gradient)
+            .onAppear {
+                let appearance = UINavigationBarAppearance()
+                appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+                appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+                appearance.backgroundEffect = UIBlurEffect(style: .systemThinMaterialDark)
+                UINavigationBar.appearance().standardAppearance = appearance
+//                UINavigationBar.appearance().scrollEdgeAppearance = appearance
             }
         }
     }
