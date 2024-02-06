@@ -11,11 +11,13 @@ import SwiftData
 struct SchemeColor {
     static let topColor = Color(red: 46 / 255.0, green: 43 / 255.0, blue: 60 / 255.0)
     static let bottomColor = Color(red: 75 / 255.0, green: 52 / 255.0, blue: 89 / 255.0)
+    
     static let gradientInDarkMode = LinearGradient(
         gradient: Gradient(colors: [topColor, bottomColor]),
         startPoint: .top,
         endPoint: .bottom
     )
+    
     static let gradientInLightMode = LinearGradient(
         gradient: Gradient(colors: [Color(uiColor: .systemGray6).opacity(0.9), Color(uiColor: .systemGray6).opacity(0.97)]),
         startPoint: .top,
@@ -39,7 +41,25 @@ struct ContentView: View {
             }
             .navigationTitle("Journi")
             .navigationBarTitleDisplayMode(.automatic)
-            .background(scheme == .light ? SchemeColor.gradientInLightMode : SchemeColor.gradientInDarkMode)
+            .toolbar {
+                ToolbarItem {
+                    Button("New") {
+                        let journi = Journi.init(createdDate: .init(), content: "")
+                        modelContext.insert(journi)
+                        try? modelContext.save()
+                    }
+                    .tint(.white)
+                }
+            }
+            .background(
+                LinearGradient(
+                    gradient: Gradient(colors: [Color.gray.opacity(0.75), Color.gray.opacity(0.35)]),
+                    startPoint: .bottom,
+                    endPoint: .top
+                )
+                .opacity(0.75)
+            )
+            .background(Material.ultraThin)
             .onAppear {
                 updateNavBarAppearance(scheme)
             }
